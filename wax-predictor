@@ -1,51 +1,48 @@
 <html>
 <head>
 
-<title>Nordic Temperature and Wax Demo</title>
+	<title>Nordic Temperature and Wax Demo</title>
 
-<!-- live here: http://www.revelstokenordic.org/wax-predictor/ -->
+	<!-- live here: http://www.revelstokenordic.org/wax-predictor/ -->
 	
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-<!-- Chart Resources -->
-<script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
-<script src="https://www.amcharts.com/lib/3/serial.js"></script>
-<script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
-<link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
-<script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+	<!-- Chart Resources -->
+	<script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+	<script src="https://www.amcharts.com/lib/3/serial.js"></script>
+	<script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+	<link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+	<script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
 
-<script src="kate.js"></script>
+	<script src="kate.js"></script>
 
 
-<!-- Styles -->
-<style>
-#chartdiv {
-	width	: 100%;
-	height	: 500px;
-}
-
-#wax { font-size: 16px; font-family: Arial; }
-#swix_wax_now { color: #36539d; font-size: 20px; }
-#rode_wax_now { color: #36539d; font-size: 20px; }
-</style>
-
+	<!-- Styles -->
+	<style>
+		#chartdiv {
+			width	: 100%;
+			height	: 500px;
+		}
+		#wax { font-size: 16px; font-family: Arial; }
+		#swix_wax_now { color: #36539d; font-size: 20px; }
+		#rode_wax_now { color: #36539d; font-size: 20px; }
+	</style>
 
 </head>
 <body>
+	<div id="chartdiv"></div>
+	<br />
+	<span id="wax">Swix wax recommendation: <span id="swix_wax_now"></span></span>
+	<br />
+	<span id="wax">Rode wax recommendation: <span id="rode_wax_now"></span></span>
 
-<div id="chartdiv"></div>
-<br />
-<span id="wax">Swix wax recommendation: <span id="swix_wax_now"></span></span>
-<br />
-<span id="wax">Rode wax recommendation: <span id="rode_wax_now"></span></span>
+	<script>
 
-<script>
+		$( document ).ready(function() {
+			get_obstime();
+		});
 
-$( document ).ready(function() {
-	get_obstime();
-});
-
-</script>
+	</script>
 
 </body>
 </html>
